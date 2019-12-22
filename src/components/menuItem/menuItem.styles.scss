@@ -1,0 +1,46 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../../assets/fonts/Florsn37.ttf);
+}
+
+@font-face {
+  font-family: mySecondFont;
+  src: url(../../assets/fonts/Florsn33.ttf);
+}
+
+@font-face {
+  font-family: myRegularFont;
+  src: url(../../assets/fonts/Florsn01.ttf);
+}
+
+.menu-item {
+  font-family: myFirstFont;
+  font-size: 4vw;
+  padding: 12px;
+  transition-duration: 0.9s;
+
+  &:hover {
+    cursor: pointer;
+    font-family: mySecondFont;
+    font-size: 5vw
+  }
+}
+
+.menu-sub-items {
+  font-family: myRegularFont;
+  font-size: 2vw;
+  padding: 6px;
+  transition-duration: 0.9s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .menu-sub-item {
+    padding: 3px;
+    &:hover {
+      cursor: pointer;
+      font-size: 2.2vw
+    }
+  }
+}
