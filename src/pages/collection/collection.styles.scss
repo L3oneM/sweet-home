@@ -1,0 +1,25 @@
+.collection-container {
+  padding: 32px;
+  margin: auto;
+  max-width: 1500px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0 24px 0;
+
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .items-count {
+      font-size: 24px;
+    }
+  }
+
+  .item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 16px;
+  }
+}

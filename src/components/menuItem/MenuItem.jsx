@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom'
 
 import './menuItem.styles.scss'
 
-const MenuItem = ({ section, setImage }) => {
+const MenuItem = ({ section, setImage, match, history }) => {
   const [isOpen, setOpen] = useState(false)
 
-  const subSections = [] 
-
-  for (let key in section.subSections) {
-    subSections.push(key)
-  }
+  const { title, imageUrl, subSections } = section
 
   return (
     <div
      className='menu-item'
-     onMouseOver={() => setImage(section.imageUrl)}
+     onMouseOver={() => setImage(imageUrl)}
      onClick={() => setOpen(!isOpen)}
     >
       {
-        section.title
+        title
       }
       {
         isOpen
         ? 
-        <div className='menu-sub-items'>
-          {subSections.map((sub => <div key={sub} className='menu-sub-item'>{sub}</div>))}
+        <div className='menu-sub-items' >
+          {subSections.map((sub =>
+            <div
+             key={sub.id} className='menu-sub-item'
+             onClick={() => history.push(`${match.url}${sub.linkUrl}`)}
+            >{sub.title}</div>))}
         </div>
         : null
       }
@@ -32,4 +33,4 @@ const MenuItem = ({ section, setImage }) => {
   );
 };
 
-export default MenuItem;
+export default withRouter(MenuItem);

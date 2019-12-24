@@ -3,10 +3,14 @@ const SHOP_DATA = [
     title: 'Kitchen',
     imageUrl: 'images/directory/kitchen.jpg',
     id: 1,
-    linkUrl: 'shop/kitchen',
-    subSections: {
-      tables: [{
-        "id": 766,
+    linkUrl: '/kitchen',
+    subSections: [
+      {
+        title: "Tables",
+        id: 125,
+        linkUrl: '/tables',
+        items: [{
+        id: 766,
         "name": "Gourka",
         "imageUrl": "http://dummyimage.com/112x214.jpg/dddddd/000000",
         "price": 196,
@@ -53,8 +57,12 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/135x196.jpg/5fa2dd/ffffff",
         "price": 75,
         "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci."
-      }],
-      chairs: [{
+      }]},
+      {
+        title: "Chairs",
+        linkUrl: '/chairs',
+        id: 129,
+        items: [{
         "id": 798,
         "name": "Alpine Bittercress",
         "imageUrl": "http://dummyimage.com/195x249.jpg/ff4444/ffffff",
@@ -90,16 +98,19 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/183x171.jpg/ff4444/ffffff",
         "price": 203,
         "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio."
-      }]
-    }
+      }]}
+    ]
   },
   {
     title: 'Living Room',
     imageUrl: 'images/directory/livingroom.jpg',
     id: 2,
-    linkUrl: 'shop/livingroom',
-    subSections: {
-      sofas:[{
+    linkUrl: '/livingroom',
+    subSections: [
+      {title: "Sofas",
+      linkUrl: '/sofas',
+      id: 137,
+      items:[{
         "id": 4561,
         "name": "Manycolor Rimmed Lichen",
         "imageUrl": "http://dummyimage.com/147x176.jpg/5fa2dd/ffffff",
@@ -135,8 +146,11 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/121x146.jpg/ff4444/ffffff",
         "price": 68,
         "description": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui."
-      }],
-      lighting: [{
+      }]},
+      {title: "Lighting",
+      linkUrl: '/lighting',
+      id: 138,
+      items: [{
         "id": 3373,
         "name": "White Frasera",
         "imageUrl": "http://dummyimage.com/122x192.jpg/5fa2dd/ffffff",
@@ -190,16 +204,19 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/174x153.jpg/5fa2dd/ffffff",
         "price": 130,
         "description": "Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit."
-      }]
-    }
+      }]}
+    ]
   },
   {
     title: 'Bedroom',
     imageUrl: 'images/directory/bedroom.jpg',
     id: 3,
-    linkUrl: 'shop/bedroom',
-    subSections: {
-      Beds: [{
+    linkUrl: '/bedroom',
+    subSections: [
+      {title: "Beds",
+       linkUrl: '/beds',
+       id: 15486,
+        items: [{
         "id": 6752,
         "name": "Floating Mannagrass",
         "imageUrl": "http://dummyimage.com/173x149.jpg/cc0000/ffffff",
@@ -235,8 +252,12 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/167x190.jpg/cc0000/ffffff",
         "price": 155,
         "description": "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus."
-      }],
-      wardrobes: [{
+      }]},
+      {
+        title: "Wardrobes",
+        linkUrl: '/wardrobes',
+        id: 154876,
+        items: [{
         "id": 6816,
         "name": "Spearmint",
         "imageUrl": "http://dummyimage.com/119x147.jpg/cc0000/ffffff",
@@ -254,16 +275,19 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/184x188.jpg/ff4444/ffffff",
         "price": 124,
         "description": "Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo."
-      }] 
-    }
+      }]} 
+    ]
   },
   {
     title: 'Bath',
     imageUrl: 'images/directory/bathroom.jpg',
     id: 4,
-    linkUrl: 'shop/bathroom',
-    subSections: {
-      Bath:[{
+    linkUrl: '/bathroom',
+    subSections: [
+      { title: "Bath",
+        linkUrl: '/bath',
+        id: 454876,
+        items:[{
         "id": 692,
         "name": "False Mallow",
         "imageUrl": "http://dummyimage.com/170x244.jpg/ff4444/ffffff",
@@ -281,8 +305,11 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/224x125.jpg/dddddd/000000",
         "price": 217,
         "description": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
-      }],
-      Shower:[{
+      }]},
+      { title: "Shower",
+       linkUrl: '/shower',
+       id: 4654776,
+       items:[{
         "id": 3890,
         "name": "Leptarrhena",
         "imageUrl": "http://dummyimage.com/213x154.jpg/dddddd/000000",
@@ -294,17 +321,19 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/155x220.jpg/5fa2dd/ffffff",
         "price": 236,
         "description": "Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem."
-      }]
-    }
+      }]}
+    ]
   },
   {
     title: 'More',
     imageUrl: 'images/directory/more.jpg',
-    size: 'large',
     id: 5,
-    linkUrl: 'shop/more',
-    subSections: {
-      Cooking:[{
+    linkUrl: '/more',
+    subSections: [
+      {title: "Cooking",
+       linkUrl: '/cooking',
+       id: 457894776,
+       items:[{
         "id": 3245,
         "name": "Desert Thorn-apple",
         "imageUrl": "http://dummyimage.com/200x106.jpg/5fa2dd/ffffff",
@@ -346,8 +375,11 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/169x196.jpg/5fa2dd/ffffff",
         "price": 194,
         "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla."
-      }],
-      Art:[{
+      }]},
+      {title: "Art",
+       linkUrl: '/art',
+       id: 987894776,
+       items:[{
         "id": 4997,
         "name": "American Chestnut",
         "imageUrl": "http://dummyimage.com/220x112.jpg/dddddd/000000",
@@ -377,8 +409,8 @@ const SHOP_DATA = [
         "imageUrl": "http://dummyimage.com/133x117.jpg/5fa2dd/ffffff",
         "price": 72,
         "description": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam."
-      }]
-    }
+      }]}
+    ]
   }
 ]
 
