@@ -1,42 +1,53 @@
 import React from 'react';
+import { connect } from 'react-redux'
+
+import {
+  addItem,
+  clearItemFromCart,
+  removeItem
+} from '../../redux/cart/cart.actions'
 
 import './cart-item.styles.scss'
 
-const CartItem = () => {
-  const item = {
-    "id": 766,
-    "name": "Gourka",
-    "imageUrl": "http://dummyimage.com/214x214.jpg/dddddd/000000",
-    "price": 196,
-    "description": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. "
-  }
+const CartItem = ({ cartItem, addItem, clearItemFromCart, removeItem }) => {
 
-  const { name, imageUrl, price, description, quantity } = item
+  const { name, imageUrl, price, quantity } = cartItem
 
   return (
     <div className='cart-item-container'>
-      <div className="cart-item-image-container">
-        <img src={imageUrl} alt="item"/>
+      <div className="cart-image-container">
+        <img src={imageUrl} alt="item" />
       </div>
-      <div className="cart-item-info">
+      <div className="info">
         <div className='remove-btn-container'>
-          <div className='remove-btn'>
-            &#10005;
+          <div
+           className='remove-btn' 
+           onClick={() => removeItem(cartItem)}>
+          &#10005;
           </div>
         </div>
-        <div className='cart-item-name'>
+        <div className='name' >
           {name}
         </div>
-        <div className="cart-item-price">
-          ${price}
+        <div className="price">
+          <span>Price:</span> ${price}
         </div>
-        <div className='desc-and-quan-container'>
-          <div className="cart-item-description">
-            <p>Description</p>
-            {description}
-          </div>
-          <div className="cart-item-quantity">QTY
-            {quantity}
+        <div className="quantity">
+          QTY 
+          <div className='add-remove-con'>
+            <div
+             className='arrow' 
+             onClick={()=> removeItem(cartItem)}>
+              &#10094;
+            </div>
+            <span className='value'>
+              {quantity}
+            </span>
+            <div
+             className='arrow'
+             onClick={() => addItem(cartItem)}>
+              &#10095;
+            </div>
           </div>
         </div>
       </div>
@@ -44,4 +55,10 @@ const CartItem = () => {
   );
 };
 
-export default CartItem;
+const mapDispatchToProps = dispatch => ({
+  addItem: item => dispatch(addItem(item)),
+  clearItem: item => dispatch(clearItemFromCart(item)),
+  removeItem: item => dispatch(removeItem(item))
+})
+
+export default connect(null, mapDispatchToProps)(CartItem);
