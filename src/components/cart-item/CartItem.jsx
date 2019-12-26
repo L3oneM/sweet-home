@@ -9,7 +9,7 @@ import {
 
 import './cart-item.styles.scss'
 
-const CartItem = ({ cartItem, addItem, clearItemFromCart, removeItem }) => {
+const CartItem = ({ cartItem, addItem, clearItem, removeItem }) => {
 
   const { name, imageUrl, price, quantity } = cartItem
 
@@ -22,7 +22,7 @@ const CartItem = ({ cartItem, addItem, clearItemFromCart, removeItem }) => {
         <div className='remove-btn-container'>
           <div
            className='remove-btn' 
-           onClick={() => removeItem(cartItem)}>
+           onClick={() => clearItem(cartItem)}>
           &#10005;
           </div>
         </div>

@@ -1,0 +1,40 @@
+.cart-summary-container {
+
+  .header {
+    padding: 0 0 36px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  .total-items {
+    padding: 16px 0;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .price {
+    padding: 16px 0;
+
+    span {
+      display: block;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+
+  button {
+    margin: 16px 0;
+  }
+
+  .payments {
+    margin: 16px 0;
+  }
+
+  .test-warning{
+    color: red;
+    margin: 16px 0;
+  }
+}
