@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux'
 
-import SHOP_DATA from "../../pages/shop/shop.data";
+import { createStructuredSelector } from 'reselect'
+
+import { selectDirectorySections } from '../../redux/directory/directory.selectors';
 
 import './directory.styles.scss'
 
 import MenuItem from '../menuItem/MenuItem'
 
-const Directory = () => {
+const Directory = ({ sections }) => {
   const [ imageUrl, setImage ] = useState('images/directory/kitchen.jpg')
-  const [ sections ] = useState(SHOP_DATA)
 
   return (
     <div className='directory-container'>
@@ -27,4 +29,10 @@ const Directory = () => {
   );
 };
 
-export default Directory;
+const mapStateToProps = createStructuredSelector({
+  sections: selectDirectorySections
+})
+
+
+
+export default connect(mapStateToProps)(Directory);

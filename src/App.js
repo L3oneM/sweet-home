@@ -9,6 +9,7 @@ import HomePage from './pages/homepage/Homepage'
 import Shop from './pages/shop/Shop'
 import SignInAndSignUp from './pages/sign-in-and-sign-up/SignInAndSignUp'
 import Cart from './pages/cart/Cart'
+import Contact from './pages/contact/Contact'
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
@@ -59,6 +60,7 @@ const App = (props) =>  {
           <SignInAndSignUp />
          }
         />
+        <Route exact path='/contact' component={Contact} />
       </Switch>
     </div>
   )

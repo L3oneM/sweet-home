@@ -7,7 +7,7 @@ import { addItem } from '../../redux/cart/cart.actions'
 import './collection-item.styles.scss'
 
 const CollectionItem = ({ item, addItem }) => {
-  const { name, price, imageUrl } = item;
+  const { name, price, imageUrl, onSale } = item;
   
   return (
     <div className='collection-item'>
@@ -17,7 +17,13 @@ const CollectionItem = ({ item, addItem }) => {
       </div>
       <div className='collection-footer'>
         <span className='name'>{name}</span>
-        <span className='price'>${price}</span>
+        <div className='price'>
+          <span className= {`${onSale ? 'sale' : ''}`}>${price}
+          </span>
+          <span>
+            {onSale ? `  $${onSale}` : null}
+          </span>       
+        </div>
         <CustomButton onClick={() => addItem(item)}>Add to cart</CustomButton>
       </div>
     </div>

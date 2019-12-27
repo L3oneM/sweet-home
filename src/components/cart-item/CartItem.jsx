@@ -11,7 +11,7 @@ import './cart-item.styles.scss'
 
 const CartItem = ({ cartItem, addItem, clearItem, removeItem }) => {
 
-  const { name, imageUrl, price, quantity } = cartItem
+  const { name, imageUrl, price, quantity, onSale } = cartItem
 
   return (
     <div className='cart-item-container'>
@@ -29,8 +29,12 @@ const CartItem = ({ cartItem, addItem, clearItem, removeItem }) => {
         <div className='name' >
           {name}
         </div>
-        <div className="price">
-          <span>Price:</span> ${price}
+        <div className='price'>
+          <span className= {`${onSale ? 'sale' : ''}`}>${price}
+          </span>
+          <span>
+            {onSale ? `  $${onSale}` : null}
+          </span>       
         </div>
         <div className="quantity">
           QTY 

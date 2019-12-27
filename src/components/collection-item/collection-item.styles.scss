@@ -30,10 +30,13 @@
     }
 
     .price {
-      display: block;
       padding: 4px 0;
       margin: 4px auto 8px auto;
       font-weight: 600;
+
+      .sale {
+        text-decoration: line-through red;
+      }
     }
   }
 }

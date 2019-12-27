@@ -8,6 +8,7 @@ const SHOP_DATA = {
       "name": "Gourka",
       "imageUrl": "http://dummyimage.com/112x214.jpg/dddddd/000000",
       "price": 196,
+      "onSale": 137,
       "description": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim."
     }, {
       "id": 403,
@@ -32,6 +33,7 @@ const SHOP_DATA = {
       "name": "Plateau Thimbleweed",
       "imageUrl": "http://dummyimage.com/210x215.jpg/cc0000/ffffff",
       "price": 109,
+      "onSale": 87,
       "description": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc."
     }, {
       "id": 220,
@@ -50,6 +52,7 @@ const SHOP_DATA = {
       "name": "Southwestern Brickellbush",
       "imageUrl": "http://dummyimage.com/135x196.jpg/5fa2dd/ffffff",
       "price": 75,
+      "onSale": 50,
       "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl."
   }]},
   chairs: {
@@ -73,6 +76,7 @@ const SHOP_DATA = {
     "name": "Sickle Spurge",
     "imageUrl": "http://dummyimage.com/125x150.jpg/dddddd/000000",
     "price": 199,
+    "onSale": 125,
     "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis."
   }, {
     "id": 446,
@@ -85,12 +89,14 @@ const SHOP_DATA = {
     "name": "Digitgrass",
     "imageUrl": "http://dummyimage.com/176x156.jpg/5fa2dd/ffffff",
     "price": 57,
+    "onSale": 45,
     "description": "Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit."
   }, {
     "id": 253,
     "name": "Veiny Pepperweed",
     "imageUrl": "http://dummyimage.com/183x171.jpg/ff4444/ffffff",
     "price": 203,
+    "onSale": 168,
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
   }]},
   sofas: {title: "Sofas",
@@ -113,6 +119,7 @@ const SHOP_DATA = {
     "name": "Tupelo",
     "imageUrl": "http://dummyimage.com/234x228.jpg/cc0000/ffffff",
     "price": 130,
+    "onSale": 102,
     "description": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla."
   }, {
     "id": 9538,
@@ -125,6 +132,7 @@ const SHOP_DATA = {
     "name": "Hairy Wild Coffee",
     "imageUrl": "http://dummyimage.com/136x149.jpg/cc0000/ffffff",
     "price": 88,
+    "onSale": 65,
     "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis."
   }, {
     "id": 482,
@@ -159,6 +167,7 @@ const SHOP_DATA = {
     "name": "Melocactus",
     "imageUrl": "http://dummyimage.com/115x221.jpg/ff4444/ffffff",
     "price": 178,
+    "onSale": 137,
     "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue."
   }, {
     "id": 5922,
@@ -171,6 +180,7 @@ const SHOP_DATA = {
     "name": "Indian-physic",
     "imageUrl": "http://dummyimage.com/104x249.jpg/5fa2dd/ffffff",
     "price": 117,
+    "onSale": 92,
     "description": "Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla."
   }, {
     "id": 7621,
@@ -205,6 +215,7 @@ const SHOP_DATA = {
     "name": "Strigose Beard Lichen",
     "imageUrl": "http://dummyimage.com/243x250.jpg/5fa2dd/ffffff",
     "price": 187,
+    "onSale": 120,
     "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
   }, {
     "id": 3610,
@@ -217,6 +228,7 @@ const SHOP_DATA = {
     "name": "Marbleseed",
     "imageUrl": "http://dummyimage.com/243x203.jpg/dddddd/000000",
     "price": 246,
+    "onSale": 155,
     "description": "Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
   }, {
     "id": 2086,
@@ -246,6 +258,7 @@ const SHOP_DATA = {
     "name": "Saguaro",
     "imageUrl": "http://dummyimage.com/119x153.jpg/cc0000/ffffff",
     "price": 91,
+    "onSale": 70,
     "description": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci."
   }, {
     "id": 8511,
@@ -274,6 +287,7 @@ const SHOP_DATA = {
     "name": "Wart Lichen",
     "imageUrl": "http://dummyimage.com/224x125.jpg/dddddd/000000",
     "price": 217,
+    "onSale": 168,
     "description": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
   }]},
   shower: { title: "Shower",
@@ -284,6 +298,7 @@ const SHOP_DATA = {
       "name": "Leptarrhena",
       "imageUrl": "http://dummyimage.com/213x154.jpg/dddddd/000000",
       "price": 213,
+      "onSale": 180,
       "description": "Quisque porta volutpat erat."
     }, {
       "id": 8294,
@@ -300,6 +315,7 @@ const SHOP_DATA = {
     "name": "Desert Thorn-apple",
     "imageUrl": "http://dummyimage.com/200x106.jpg/5fa2dd/ffffff",
     "price": 54,
+    "onSale": 35,
     "description": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue."
   }, {
     "id": 3964,
@@ -312,6 +328,7 @@ const SHOP_DATA = {
     "name": "Yerba Parrera",
     "imageUrl": "http://dummyimage.com/237x145.jpg/cc0000/ffffff",
     "price": 50,
+    "onSale": 40,
     "description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique."
   }, {
     "id": 2062,
@@ -364,6 +381,7 @@ const SHOP_DATA = {
     "name": "West Indian Dodder",
     "imageUrl": "http://dummyimage.com/152x211.jpg/dddddd/000000",
     "price": 240,
+    "onSale": 225,
     "description": "Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis."
   }, {
     "id": 2424,
@@ -371,73 +389,148 @@ const SHOP_DATA = {
     "imageUrl": "http://dummyimage.com/133x117.jpg/5fa2dd/ffffff",
     "price": 72,
     "description": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet."
-  }]}
-}
-
-
-export const DIRECTORY_DATA = [
-  {title: 'Kitchen',
-  imageUrl: 'images/directory/kitchen.jpg',
-  id: 1,
-  linkUrl: '/kitchen',
-  subSections: [
+  }]},
+  sales: { title: "Sales",
+    linkUrl: '/art',
+    id: 9878159753,
+    items : [
     {
-      title: "Tables",
-      linkUrl: '/tables'
+      "id": 4832,
+      "name": "West Indian Dodder",
+      "imageUrl": "http://dummyimage.com/152x211.jpg/dddddd/000000",
+      "price": 240,
+      "onSale": 225,
+      "description": "Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis."
     },
     {
-      title: "Chairs",
-      linkUrl: '/chairs',
+      id: 766,
+      "name": "Gourka",
+      "imageUrl": "http://dummyimage.com/112x214.jpg/dddddd/000000",
+      "price": 196,
+      "onSale": 137,
+      "description": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim."
+    },
+    {
+      "id": 251,
+      "name": "Plateau Thimbleweed",
+      "imageUrl": "http://dummyimage.com/210x215.jpg/cc0000/ffffff",
+      "price": 109,
+      "onSale": 87,
+      "description": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc."
+    },
+    {
+      "id": 232,
+      "name": "Southwestern Brickellbush",
+      "imageUrl": "http://dummyimage.com/135x196.jpg/5fa2dd/ffffff",
+      "price": 75,
+      "onSale": 50,
+      "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl."
+    },
+    {
+      "id": 316,
+      "name": "Sickle Spurge",
+      "imageUrl": "http://dummyimage.com/125x150.jpg/dddddd/000000",
+      "price": 199,
+      "onSale": 125,
+      "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis."
+    },
+    {
+      "id": 190,
+      "name": "Digitgrass",
+      "imageUrl": "http://dummyimage.com/176x156.jpg/5fa2dd/ffffff",
+      "price": 57,
+      "onSale": 45,
+      "description": "Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit."
+    },
+    {
+      "id": 253,
+      "name": "Veiny Pepperweed",
+      "imageUrl": "http://dummyimage.com/183x171.jpg/ff4444/ffffff",
+      "price": 203,
+      "onSale": 168,
+      "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus."
+    },
+    {
+      "id": 1809,
+      "name": "Tupelo",
+      "imageUrl": "http://dummyimage.com/234x228.jpg/cc0000/ffffff",
+      "price": 130,
+      "onSale": 102,
+      "description": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla."
+    },
+    {
+      "id": 1500,
+      "name": "Hairy Wild Coffee",
+      "imageUrl": "http://dummyimage.com/136x149.jpg/cc0000/ffffff",
+      "price": 88,
+      "onSale": 65,
+      "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis."
+    },
+    {
+      "id": 9853,
+      "name": "Melocactus",
+      "imageUrl": "http://dummyimage.com/115x221.jpg/ff4444/ffffff",
+      "price": 178,
+      "onSale": 137,
+      "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue."
+    },
+    {
+      "id": 8656,
+      "name": "Indian-physic",
+      "imageUrl": "http://dummyimage.com/104x249.jpg/5fa2dd/ffffff",
+      "price": 117,
+      "onSale": 92,
+      "description": "Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla."
+    },
+    {
+      "id": 8626,
+      "name": "Strigose Beard Lichen",
+      "imageUrl": "http://dummyimage.com/243x250.jpg/5fa2dd/ffffff",
+      "price": 187,
+      "onSale": 120,
+      "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus."
+    },
+    {
+      "id": 3756,
+      "name": "Saguaro",
+      "imageUrl": "http://dummyimage.com/119x153.jpg/cc0000/ffffff",
+      "price": 91,
+      "onSale": 70,
+      "description": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci."
+    },
+    {
+      "id": 9415,
+      "name": "Wart Lichen",
+      "imageUrl": "http://dummyimage.com/224x125.jpg/dddddd/000000",
+      "price": 217,
+      "onSale": 168,
+      "description": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
+    },
+    {
+      "id": 3890,
+      "name": "Leptarrhena",
+      "imageUrl": "http://dummyimage.com/213x154.jpg/dddddd/000000",
+      "price": 213,
+      "onSale": 180,
+      "description": "Quisque porta volutpat erat."
+    },
+    {
+      "id": 3245,
+      "name": "Desert Thorn-apple",
+      "imageUrl": "http://dummyimage.com/200x106.jpg/5fa2dd/ffffff",
+      "price": 54,
+      "onSale": 35,
+      "description": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue."
+    },
+    {
+      "id": 1624,
+      "name": "Yerba Parrera",
+      "imageUrl": "http://dummyimage.com/237x145.jpg/cc0000/ffffff",
+      "price": 50,
+      "onSale": 40,
+      "description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique."
     }
-]},
-  {title: 'Living Room',
-  imageUrl: 'images/directory/livingroom.jpg',
-  id: 2,
-  linkUrl: '/livingroom',
-  subSections:[{
-    title: "Sofas",
-    linkUrl: '/sofas',
-  },{
-    title: "Lighting",
-    linkUrl: '/lighting'
-  }],}
-  ,{
-    title: 'Bedroom',
-    imageUrl: 'images/directory/bedroom.jpg',
-    id: 3,
-    linkUrl: '/bedroom',
-    subSections:[{
-      title: "Beds",
-      linkUrl: '/beds'
-    },{
-      title: "Wardrobes",
-      linkUrl: '/wardrobes'
-    }]
-  },
-  {
-    title: 'Bath',
-    imageUrl: 'images/directory/bathroom.jpg',
-    id: 4,
-    linkUrl: '/bathroom',
-    subSections:[{
-      title: "Bath",
-      linkUrl: '/bath'
-    },{
-      title: "Shower",
-      linkUrl: '/shower'
-    }]
-  },
-  {title: 'More',
-    imageUrl: 'images/directory/more.jpg',
-    size: 'large',
-    id: 5,
-    linkUrl: '/more',
-    subSections:[{
-      title: "Cooking",
-      linkUrl: '/cooking'
-    },{
-      title: "Art",
-      linkUrl: '/art'
-    }]}
-]
+  ]}
+}
+
 export default SHOP_DATA

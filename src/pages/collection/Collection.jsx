@@ -16,7 +16,7 @@ const Collection = ({ collection }) => {
           {title}
         </div>
         <div className="items-count">
-          5 items found
+          {items.length} items found
         </div>
       </div>
       <div className="item-container">

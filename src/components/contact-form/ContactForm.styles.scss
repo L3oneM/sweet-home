@@ -1,0 +1,18 @@
+.contact-form {
+  width: 500px;
+  margin: auto;
+  text-align: left;
+
+  .cmnt-lbl {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    color: grey;
+  }
+
+  textarea {
+    margin-bottom: 35px;
+    border: 1px solid grey;
+  }
+}

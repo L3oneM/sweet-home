@@ -44,6 +44,10 @@
       font-weight: bold;
       margin: 12px;
       padding: 9px 0;
+
+      .sale {
+        text-decoration: line-through red;
+      }
     }
       
     .quantity{
