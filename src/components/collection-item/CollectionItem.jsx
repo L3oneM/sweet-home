@@ -13,7 +13,7 @@ const CollectionItem = ({ item, addItem }) => {
     <div className='collection-item'>
       <div className='image' >
         <img className='item-image' src={imageUrl} alt="item"/>
-        <img className='fav' src='/images/cart-item/heart.png' alt='fav' />
+        <img className='fav' src='/images/cart-item/heart.png' alt='fav' onClick={() => console.log('Favorite')} />
       </div>
       <div className='collection-footer'>
         <span className='name'>{name}</span>

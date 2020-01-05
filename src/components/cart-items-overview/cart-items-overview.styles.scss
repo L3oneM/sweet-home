@@ -6,4 +6,10 @@
     font-weight: bold;
     padding: 0 0 32px;
   }
+
+  .cart-items-container{
+    max-height: 75vh;
+    width: fit-content;
+    overflow: auto;
+  }
 }

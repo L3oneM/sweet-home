@@ -35,7 +35,6 @@ const App = (props) =>  {
       }
 
       setCurrentUser(userAuth)
-
     })
 
     return () => {

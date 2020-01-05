@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 
 import { auth } from '../../firebase/firebase.utils'
+import CartIcon from '../cart-icon/CartIcon'
 
 import { ReactComponent as Logo } from '../../assets/logo2.svg'
 
@@ -21,12 +22,22 @@ const Header = ({ currentUser }) => {
         {
           currentUser
            ?
-           <div className='option right-items' onClick={() => auth.signOut()}>Sign Out</div>
+           <div className='right-items fav-out'>
+              <div
+               className="option favorites"
+               onClick={() => console.log('object')}
+              >
+              </div>
+              <div className='option' onClick={() => auth.signOut()}>Sign Out
+              </div>
+           </div>
            :
            <Link className='option right-items' to='/signin' >Sign In</Link>
         }
-        <Link className='option right-items' to='/cart' >Cart</Link>
-      </div>
+        <Link className='option right-items cart-icon-cnt' to='/cart' >
+          <CartIcon />
+        </Link>
+      </div>  
     </div>
   )
 };

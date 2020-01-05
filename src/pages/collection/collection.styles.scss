@@ -1,7 +1,7 @@
 .collection-container {
   padding: 32px;
   margin: auto;
-  max-width: 1400px;
+  max-width: 1300px;
   .header {
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,7 @@
 
   .item-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 16px;
   }
 }
