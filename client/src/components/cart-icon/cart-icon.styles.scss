@@ -1,0 +1,17 @@
+.cart-icon {
+  position: relative;
+
+  .item-count {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    font-size: 14px;
+    font-weight: bold;
+    top: 14px;
+    left: 35px;
+    color: #fff;
+    background-color: #b8860b;
+    border-radius: 50%;
+    text-align: center;
+  }
+}

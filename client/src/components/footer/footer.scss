@@ -1,0 +1,25 @@
+.footer-container {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+
+  .follow {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      margin: 0 5px;
+    }
+
+    a {
+      margin: 0 5px;
+    }
+  }
+
+  .copy{
+    padding: 0 15px 25px 15px;
+  }
+}
