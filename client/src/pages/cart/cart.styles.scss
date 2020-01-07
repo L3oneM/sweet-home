@@ -1,7 +1,29 @@
 .cart-page-container{
   display: flex;
+  justify-content: space-between;
   padding: 32px;
   margin: auto;
-  max-width: 1300px;
-  min-width: 1200px;
+  width: 1250px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cart-page-container {
+    width: 740px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cart-page-container {
+    width: 640px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cart-page-container {
+    width: 310px;
+  }
 }

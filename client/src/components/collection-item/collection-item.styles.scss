@@ -17,15 +17,15 @@
        height: 300px;
      }
 
-     .fav {
-       position: absolute;
-       top: 5%;
-       left: 5%;
+    //  .fav {
+    //    position: absolute;
+    //    top: 5%;
+    //    left: 5%;
 
-       &:hover {
-         cursor: pointer;
-       }
-     }
+    //    &:hover {
+    //      cursor: pointer;
+    //    }
+    // }
     margin-bottom: 4px;
   }
 
@@ -45,6 +45,19 @@
 
       .sale {
         text-decoration: line-through red;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .collection-item {
+    width: 250px;
+    height: 450px;
+
+    .image {
+      .item-image {
+        height: 200px;
       }
     }
   }

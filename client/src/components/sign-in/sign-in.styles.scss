@@ -2,6 +2,7 @@
   width: 450px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 
   .title {
     margin: 10px 0;
@@ -10,5 +11,28 @@
   .buttons {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .sign-in {
+    width: 450px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .sign-in {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 40px;
+  
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 280px;
+    }
   }
 }

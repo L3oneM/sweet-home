@@ -1,10 +1,9 @@
 .header-container {
   height: 70px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  // background-color: #363636;
   background-color: #000;
 }
 
@@ -53,5 +52,43 @@
     margin: auto;
     height: 56px;
     width: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .left-opt {
+    display: none;
+    opacity: 0.8;
+    z-index: 2;
+
+    &.isActive {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      background-color: #000;
+      position: fixed;
+      top: 70px;
+      left: 0;
+    }
+
+    .option {
+      clear: left;
+      margin-bottom: 2px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .right-items{
+      font-size: 18px;
+      
+      &.option {
+        padding: 14px 8px;
+      }
+    }
+
+    .logo-container {
+      margin: 0;
+    }
   }
 }

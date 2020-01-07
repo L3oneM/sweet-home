@@ -73,8 +73,8 @@ const ContactForm = () => {
           />
           <label htmlFor="comments" className='cmnt-lbl'>Comments</label>
           <textarea
-          rows='5'
-          cols='60'
+          rows='10'
+          cols='35'
           name='comments'
           value={comments}
           onChange={handleChange}

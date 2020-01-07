@@ -15,20 +15,20 @@
 
 .menu-item {
   font-family: myFirstFont;
-  font-size: 4vw;
+  font-size: 50px;
   padding: 12px;
   transition-duration: 0.9s;
 
   &:hover {
     cursor: pointer;
     font-family: mySecondFont;
-    font-size: 5vw
+    font-size: 60px;
   }
 }
 
 .menu-sub-items {
   font-family: myRegularFont;
-  font-size: 2vw;
+  font-size: 25px;
   padding: 6px;
   transition-duration: 0.9s;
   display: flex;
@@ -40,7 +40,25 @@
     padding: 3px;
     &:hover {
       cursor: pointer;
-      font-size: 2.2vw
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .menu-item {
+      font-size: 40px;
+
+      &:hover {
+        font-size: 45px;
+      }
+  }
+
+  .menu-sub-items{
+    font-size: 20px;
+
+    &:hover {
+      font-size: 25px;
     }
   }
 }

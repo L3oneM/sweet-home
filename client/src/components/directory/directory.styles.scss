@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.8s;
   }
 }
 
@@ -17,4 +18,40 @@
   width: 65%;
   background-size: cover;
   background-position: center;
+}
+
+@media screen and (max-width: 1250px) {
+  .directory-container {
+    .directory {
+      width: 45%;
+    }
+  }
+  
+  .directory-image {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .directory-container {
+    .directory {
+      width: 50%;
+    }
+  }
+  
+  .directory-image {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .directory-container {
+    .directory {
+      width: 100%;
+    }
+  }
+  
+  .directory-image {
+    display: none;
+  }
 }

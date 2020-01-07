@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;  
+  align-items: center;
   
   #main-header {
     text-align: center;
@@ -35,5 +35,24 @@
 
   &:hover {
     background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .homePage {
+    display: block;
+  }
+
+  .home-info {
+    position: relative;
+    top: 30%;
+    margin: auto;
+    #main-header {
+      font-size: 32px;
+    }
+  
+    #sub-header {
+      font-size: 16px;
+    }
   }
 }
