@@ -7,7 +7,7 @@ import { selectDirectorySections } from '../../redux/directory/directory.selecto
 
 import './directory.styles.scss'
 
-import MenuItem from '../menuItem/MenuItem'
+import MenuItem from '../menu-item/MenuItem'
 
 const Directory = ({ sections }) => {
   const [ imageUrl, setImage ] = useState('images/directory/kitchen.jpg')

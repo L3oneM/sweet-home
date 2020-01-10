@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { signOutStart } from '../../redux/user/user.actions'
 
 import CartIcon from '../cart-icon/CartIcon'
-import MenuIcon from '../menuIcon/MenuIcon'
+import HumMenuIcon from '../hum-menu-icon/HumMenuIcon'
 
 import { ReactComponent as Logo } from '../../assets/logo2.svg'
 
@@ -20,7 +20,7 @@ const Header = ({ currentUser, signOutStart }) => {
 
   return (
     <div className='header-container'>
-      <MenuIcon isActive={isActive} setActive={setActive} />
+      <HumMenuIcon isActive={isActive} setActive={setActive} />
       <Link className='logo-container' to='/'>
         <Logo className='logo'/>
       </Link>

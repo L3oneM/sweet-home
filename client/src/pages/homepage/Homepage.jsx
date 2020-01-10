@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 
-import CustomButton from '../../components/custom-button/CustumButton'
+import CustomButton from '../../components/custom-button/CustomButton'
 
 import './homepage.styles.scss'
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 import FormInput from '../form-input/FormInput'
-import CustomButton from '../custom-button/CustumButton'
+import CustomButton from '../custom-button/CustomButton'
 
-import './ContactForm.styles.scss'
+import './contactForm.styles.scss'
 
 const ContactForm = () => {
   const [userCredentials, setCredentials] = useState({

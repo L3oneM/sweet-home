@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios'
 import { clearCart } from '../../redux/cart/cart.actions'
 
-import CustomButton from '../custom-button/CustumButton'
+import CustomButton from '../custom-button/CustomButton'
 
 const StripeButton = ({ price, clearCart }) => {
   const priceForStripe = price * 100;

@@ -9,7 +9,7 @@ import {
   selectCartTotal
 } from '../../redux/cart/cart.selectors'
 
-import './cart-items-overview.styles.scss'
+import './cartItemsOverview.styles.scss'
 
 const CartItemsOverview = ({ cartItems, total }) => {
   return (

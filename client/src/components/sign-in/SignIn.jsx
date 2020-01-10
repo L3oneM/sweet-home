@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux'
 
 import FormInput from '../form-input/FormInput'
-import CustomButton from '../custom-button/CustumButton'
+import CustomButton from '../custom-button/CustomButton'
 
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions'
 
-import './sign-in.styles.scss'
+import './signIn.styles.scss'
 
 const SignIn = ({ googleSignInStart, emailSignInStart }) => {
   const [userCredentials, setCredentials] = useState({

@@ -5,7 +5,7 @@ import { createStructuredSelector } from 'reselect'
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors'
 
 
-import './cart-icon.styles.scss'
+import './cartIcon.styles.scss'
 
 const CartIcon = ({ itemCount }) => {
   return (

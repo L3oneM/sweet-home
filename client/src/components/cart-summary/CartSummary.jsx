@@ -6,7 +6,7 @@ import StripeButton from '../../components/stripe-button/StripeButton'
 
 import { selectCartTotal, selectCartItemsCount } from '../../redux/cart/cart.selectors'
 
-import './CartSummary.styles.scss'
+import './cartSummary.styles.scss'
 
 
 const CartSummary = ({ TotalCartItems, total }) => {

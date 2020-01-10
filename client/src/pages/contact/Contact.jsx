@@ -3,7 +3,7 @@ import React from 'react';
 import ContactForm from '../../components/contact-form/ContactForm'
 import Footer from '../../components/footer/Footer'
 
-import './Contact.styles.scss'
+import './contact.styles.scss'
 
 const Contact = () => {
   return (

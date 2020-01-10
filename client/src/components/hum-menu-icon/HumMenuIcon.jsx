@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './menuIcon.scss'
+import './humMenuIcon.scss'
 
 const MenuIcon = ({ isActive, setActive }) => {
 
