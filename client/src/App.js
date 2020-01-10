@@ -11,37 +11,13 @@ import SignInAndSignUp from './pages/sign-in-and-sign-up/SignInAndSignUp'
 import Cart from './pages/cart/Cart'
 import Contact from './pages/contact/Contact'
 
-import { auth, createUserProfileDocument } from './firebase/firebase.utils'
-
-import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
+import { checkUserSession } from './redux/user/user.actions'
 
-const App = (props) =>  {
-  const { setCurrentUser } = props
-
+const App = ({ checkUserSession, currentUser }) =>  {
   useEffect(() => {
-    const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
-
-        userRef.onSnapshot(snapShot => {
-          setCurrentUser(
-            {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
-          );
-        });
-      }
-
-      setCurrentUser(userAuth)
-    })
-
-    return () => {
-      console.log('I am unsubscribing!')
-      unsubscribeFromAuth()
-    }
-  }, [setCurrentUser])
+    checkUserSession();
+  }, [checkUserSession]);
 
   return (
     <div>
@@ -53,7 +29,7 @@ const App = (props) =>  {
         <Route
          exact path='/signin'
          render={() => 
-          props.currentUser
+          currentUser
           ? <Redirect to='/' />
           :
           <SignInAndSignUp />
@@ -70,7 +46,7 @@ const mapStateToProps = createStructuredSelector({
 })
 
 const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+  checkUserSession: () => dispatch(checkUserSession())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

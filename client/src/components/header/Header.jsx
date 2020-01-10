@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 
-import { auth } from '../../firebase/firebase.utils'
-import { clearCart } from '../../redux/cart/cart.actions'
+import { signOutStart } from '../../redux/user/user.actions'
 
 import CartIcon from '../cart-icon/CartIcon'
 import MenuIcon from '../menuIcon/MenuIcon'
@@ -12,13 +11,8 @@ import { ReactComponent as Logo } from '../../assets/logo2.svg'
 
 import './header.styles.scss'
 
-const Header = ({ currentUser, clearCart }) => {
+const Header = ({ currentUser, signOutStart }) => {
   const [ isActive, setActive ] = useState(false)
-
-  const signOutAndCleanCart = () => {
-    auth.signOut()
-    clearCart()
-  }
 
   const handleChangeActive = () => {
     setActive(!isActive)
@@ -57,7 +51,7 @@ const Header = ({ currentUser, clearCart }) => {
                onClick={() => console.log('object')}
               >
               </div> */}
-              <div className='option' onClick={signOutAndCleanCart}>Sign Out
+              <div className='option' onClick={signOutStart}>Sign Out
               </div>
            </div>
            :
@@ -76,7 +70,7 @@ const mapStateToProps =state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  clearCart: () => dispatch(clearCart())
+  signOutStart: () => dispatch(signOutStart())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
