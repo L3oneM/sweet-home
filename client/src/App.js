@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect';
 
 import Header from './components/header/Header'
-
-import HomePage from './pages/homepage/Homepage'
-import Shop from './pages/shop/Shop'
-import SignInAndSignUp from './pages/sign-in-and-sign-up/SignInAndSignUp'
-import Cart from './pages/cart/Cart'
-import Contact from './pages/contact/Contact'
+import Spinner from './components/spinner/Spinner'
+import ErrorBoundary from './components/error-boundary/ErrorBoundary'
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions'
+
+const HomePage = lazy(() => import('./pages/homepage/Homepage'))
+const Shop = lazy(() => import('./pages/shop/Shop'))
+const SignInAndSignUp = lazy(() => import('./pages/sign-in-and-sign-up/SignInAndSignUp'))
+const Cart = lazy(() => import('./pages/cart/Cart'))
+const Contact = lazy(() => import('./pages/contact/Contact'))
 
 const App = ({ checkUserSession, currentUser }) =>  {
   useEffect(() => {
@@ -23,19 +25,23 @@ const App = ({ checkUserSession, currentUser }) =>  {
     <div>
       <Header />
       <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={Shop} />
-        <Route exact path='/cart' component={Cart} />
-        <Route
-         exact path='/signin'
-         render={() => 
-          currentUser
-          ? <Redirect to='/' />
-          :
-          <SignInAndSignUp />
-         }
-        />
-        <Route exact path='/contact' component={Contact} />
+        <ErrorBoundary>
+          <Suspense fallback={<Spinner />}>
+            <Route exact path='/' component={HomePage} />
+            <Route path='/shop' component={Shop} />
+            <Route exact path='/cart' component={Cart} />
+            <Route
+            exact path='/signin'
+            render={() => 
+              currentUser
+              ? <Redirect to='/' />
+              :
+              <SignInAndSignUp />
+            }
+            />
+            <Route exact path='/contact' component={Contact} />
+          </Suspense>
+        </ErrorBoundary>
       </Switch>
     </div>
   )
